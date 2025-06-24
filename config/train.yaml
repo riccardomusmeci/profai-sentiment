@@ -1,0 +1,33 @@
+model:
+  model_id: distilbert-base-uncased
+  num_labels: 2
+  max_length: 128
+
+dataset:
+  name: imdb
+  max_train_samples: 1024
+  max_val_samples: 256
+
+optimizer:
+  type: adamw
+  lr: 0.00002
+
+scheduler:
+  type: none
+
+loss:
+  type: cross_entropy
+
+early_stopping:
+  patience: 2
+  min_delta: 0.01
+
+training:
+  batch_size: 8
+  output_dir: ./test_outputs
+  save_every: 16
+  log_every: 16
+  validate_every: 64
+  max_epochs: 5
+  device: auto
+  seed: 42

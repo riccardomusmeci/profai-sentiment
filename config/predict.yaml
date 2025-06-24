@@ -1,0 +1,6 @@
+model:
+  model_id: distilbert-base-uncased
+  num_labels: 2
+  finetuned_weights_path: ckpt/checkpoint.pt
+
+device: auto
